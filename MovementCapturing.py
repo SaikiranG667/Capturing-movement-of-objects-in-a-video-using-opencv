@@ -12,7 +12,7 @@ while(cap.isOpened()):
   blur=cv2.GaussianBlur(gray,(5,5),0)
   _,thresh=cv2.threshold(blur,20,255,cv2.THRESH_BINARY)
   dilated=cv2.dilate(thresh,kernal,iterations=5)
-  cv2.imshow('image2',dilated)
+  #cv2.imshow('image2',dilated)
   contours,_=cv2.findContours(dilated,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
 
   # cv2.drawContours(frame1,contours,-1,(0,255,0),3)
